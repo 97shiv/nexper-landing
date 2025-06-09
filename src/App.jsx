@@ -14,6 +14,7 @@ import { Chatbot } from '@/components/Chatbot';
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -113,6 +114,7 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+      <Footer/>
     </div>
   );
 }
