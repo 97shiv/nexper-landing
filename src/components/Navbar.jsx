@@ -64,7 +64,7 @@ export function Navbar({ onNavigate, currentPage }) {
                 <Button
                   variant="ghost"
                   onClick={() => onNavigate('login')}
-                  className="text-white hover:bg-white/20"
+                  className="text-white hover:bg-white/60"
                 >
                   <User className="w-4 h-4 mr-2" />
                   Login
@@ -72,7 +72,7 @@ export function Navbar({ onNavigate, currentPage }) {
                 <Button
                  variant="ghost"
                   onClick={() => onNavigate('register')}
-                  className="text-white hover:bg-white/20"
+                  className="text-white hover:bg-white/60"
                 >
                    <UserPlus className="w-4 h-4 mr-2" />
                   Sign Up
