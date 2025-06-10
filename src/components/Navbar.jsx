@@ -12,9 +12,9 @@ export function Navbar({ onNavigate, currentPage }) {
   };
 
   return (
-    <nav className="bg-black">
+    <nav className="bg-black sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-12">
+        <div className="flex justify-between items-center h-14">
           <div className="flex items-center">
             <button
               onClick={() => onNavigate('home')}
@@ -79,7 +79,7 @@ export function Navbar({ onNavigate, currentPage }) {
                 </Button>
                 <Button
                   onClick={() => onNavigate('become-nexpert')}
-                  className="bg-white text-purple-600 hover:bg-purple-50"
+                  className=" bg-white text-purple-600 hover:bg-purple-50 px-3 py-1 text-sm"
                 >
                   Become a Nexpert
                 </Button>
