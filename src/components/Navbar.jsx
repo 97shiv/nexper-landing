@@ -66,7 +66,7 @@ export function Navbar({ onNavigate, currentPage }) {
                   onClick={() => onNavigate('login')}
                   className="text-white hover:bg-white/60"
                 >
-                  <User className="w-4 h-4 lg:mr-2" />
+                  <User className="w-4 h-4 mr-2" />
                   Login
                 </Button>
                 <Button
@@ -74,7 +74,7 @@ export function Navbar({ onNavigate, currentPage }) {
                   onClick={() => onNavigate('register')}
                   className="text-white hover:bg-white/60"
                 >
-                   <UserPlus className="w-4 h-4 lg:mr-2" />
+                   <UserPlus className="w-4 h-4 mr-2" />
                   Register
                 </Button>
                 <Button

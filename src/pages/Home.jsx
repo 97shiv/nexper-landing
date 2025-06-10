@@ -217,7 +217,7 @@ export function Home({ onNavigate, onServiceSelect }) {
         <div className="flex items-center space-x-2">
           <textarea
             rows="1"
-            placeholder="Ask for services/courses like 'Find a yoga trainer'..."
+            placeholder="Search services/courses here..."
             className="flex-1 resize-none border border-gray-300 rounded-full py-3 px-5 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
