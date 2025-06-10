@@ -24,7 +24,7 @@ export function Navbar({ onNavigate, currentPage }) {
             </button>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center lg:space-x-4">
             {user ? (
               <>
                 <span className="text-white/90 text-sm">
@@ -66,7 +66,7 @@ export function Navbar({ onNavigate, currentPage }) {
                   onClick={() => onNavigate('login')}
                   className="text-white hover:bg-white/60"
                 >
-                  <User className="w-4 h-4 mr-2" />
+                  <User className="w-4 h-4 lg:mr-2" />
                   Login
                 </Button>
                 <Button
@@ -74,8 +74,8 @@ export function Navbar({ onNavigate, currentPage }) {
                   onClick={() => onNavigate('register')}
                   className="text-white hover:bg-white/60"
                 >
-                   <UserPlus className="w-4 h-4 mr-2" />
-                  Sign Up
+                   <UserPlus className="w-4 h-4 lg:mr-2" />
+                  Register
                 </Button>
                 <Button
                   onClick={() => onNavigate('become-nexpert')}
