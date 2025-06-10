@@ -179,6 +179,25 @@ export function Home({ onNavigate, onServiceSelect }) {
       </h2>
 
       <div className="relative  backdrop-blur-sm border-2 border-purple-100 rounded-2xl p-5 shadow-lg">
+
+         <div className="flex items-center space-x-2">
+          <textarea
+            rows="1"
+            placeholder="Search services/courses here..."
+            className="flex-1 resize-none border border-gray-300 rounded-full py-3 px-5 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+          <Button
+            onClick={handleSubmit}
+            className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-5 py-2 text-white text-sm"
+          >
+            Send
+          </Button>
+        </div>
+
+        
         <div className="max-h-64 overflow-y-auto mb-3 space-y-3 text-sm text-gray-800">
           {messages.map((msg, index) => (
             <div key={index} className={msg.sender === "User" ? "text-right" : "text-left"}>
@@ -211,22 +230,7 @@ export function Home({ onNavigate, onServiceSelect }) {
           ))}
         </div>
 
-        <div className="flex items-center space-x-2">
-          <textarea
-            rows="1"
-            placeholder="Search services/courses here..."
-            className="flex-1 resize-none border border-gray-300 rounded-full py-3 px-5 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            onKeyDown={handleKeyDown}
-          />
-          <Button
-            onClick={handleSubmit}
-            className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-5 py-2 text-white text-sm"
-          >
-            Send
-          </Button>
-        </div>
+       
       </div>
     </div>
 
