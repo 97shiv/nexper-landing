@@ -160,14 +160,11 @@ export function Home({ onNavigate, onServiceSelect }) {
             Connect with skilled professionals and get your projects done with excellence
           </p> */}
           
- 
-  
   <Typography
   className={styles.heroText} // if you have other custom styles here
   sx={{
     fontWeight: 800,
-    fontSize: { xs: '1.25rem', sm: '42px' },
-   
+    fontSize: { xs: '2rem', sm: '42px' },
     lineHeight: '48px',
   }}
 >
@@ -178,7 +175,7 @@ export function Home({ onNavigate, onServiceSelect }) {
         <div className="max-w-2xl mx-auto mb-12">
       <h2 className="text-xl font-bold text-center text-white mb-4">
         What service or course do you need? <br />
-        <span className="text-white">Start now 👇</span>
+        <span className="text-white ">Start now 👇</span>
       </h2>
 
       <div className="relative  backdrop-blur-sm border-2 border-purple-100 rounded-2xl p-5 shadow-lg">
