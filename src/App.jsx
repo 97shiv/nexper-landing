@@ -62,10 +62,10 @@ function App() {
     switch (currentPage) {
       case 'home':
         return <Home onNavigate={handleNavigation} onServiceSelect={handleServiceSelect} />;
-      // case 'login':
-      //   return <Login onNavigate={handleNavigation} />;
-      // case 'register':
-      //   return <Register onNavigate={handleNavigation} />;
+      case 'login':
+        return <Login onNavigate={handleNavigation} />;
+      case 'register':
+        return <Register onNavigate={handleNavigation} />;
       // case 'become-nexpert':
       //   return <BecomeNexpert onNavigate={handleNavigation} />;
       case 'vendor-dashboard':

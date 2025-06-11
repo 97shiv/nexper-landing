@@ -61,9 +61,9 @@ export function Register({ onNavigate }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md bg-white/80 backdrop-blur-sm border-purple-200 shadow-2xl">
-        <CardHeader className="text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-t-lg">
+    <div className=" pt-10 pb-10 min-h-screen bg-gradient-to-br from-blue-950 via-black to-indigo-800 flex items-center justify-center">
+      <Card className="w-full max-w-md shadow-2xl">
+        <CardHeader className="text-center bg-gradient-to-r from-purple-900 to-blue-900 text-white rounded-t-lg">
           <CardTitle className="text-2xl font-bold">Join Nexpert Hub</CardTitle>
           <CardDescription className="text-purple-100">
             Create your account to get started
@@ -168,7 +168,7 @@ export function Register({ onNavigate }) {
 
             <Button 
               type="submit" 
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-2"
+              className="w-full bg-gradient-to-r from-purple-900 to-blue-900 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-2"
             >
               Create Account
             </Button>

@@ -86,6 +86,8 @@ export function Navbar({ onNavigate, currentPage }) {
               </>
             )}
           </div>
+
+          
         </div>
       </div>
     </nav>
