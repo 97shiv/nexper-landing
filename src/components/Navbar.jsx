@@ -33,8 +33,8 @@ export function Navbar({ onNavigate, currentPage }) {
                 {isVendor && (
                   <Button
                     variant="ghost"
-                    onClick={() => onNavigate('vendor-dashboard')}
-                    className="text-white hover:bg-white/20"
+                    // onClick={() => onNavigate('vendor-dashboard')}
+                    className="text-white hover:bg-white/70"
                   >
                     <Settings className="w-4 h-4 mr-2" />
                     Vendor Dashboard
@@ -43,8 +43,8 @@ export function Navbar({ onNavigate, currentPage }) {
                 {isAdmin && (
                    <Button
                     variant="ghost"
-                    onClick={() => onNavigate('admin-dashboard')}
-                    className="text-white hover:bg-white/20"
+                    // onClick={() => onNavigate('admin-dashboard')}
+                    className="text-white hover:bg-white/70"
                   >
                     <ShieldCheck className="w-4 h-4 mr-2" />
                     Admin Dashboard
@@ -53,7 +53,7 @@ export function Navbar({ onNavigate, currentPage }) {
                 <Button
                   variant="ghost"
                   onClick={handleLogout}
-                  className="text-white hover:bg-white/20"
+                  className="text-white hover:bg-white/70"
                 >
                   <LogOut className="w-4 h-4 mr-2" />
                   Logout
