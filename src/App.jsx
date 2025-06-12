@@ -66,8 +66,8 @@ function App() {
         return <Login onNavigate={handleNavigation} />;
       case 'register':
         return <Register onNavigate={handleNavigation} />;
-      // case 'become-nexpert':
-      //   return <BecomeNexpert onNavigate={handleNavigation} />;
+      case 'become-nexpert':
+        return <BecomeNexpert onNavigate={handleNavigation} />;
       case 'vendor-dashboard':
         return isVendor ? <VendorDashboard /> : <Home onNavigate={handleNavigation} onServiceSelect={handleServiceSelect} />;
       case 'admin-dashboard':
