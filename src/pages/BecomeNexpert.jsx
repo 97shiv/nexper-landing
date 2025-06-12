@@ -68,33 +68,33 @@ export function BecomeNexpert({ onNavigate }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-indigo-900 text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
             Become a Nexpert
           </h1>
-          <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
             Join our community of skilled professionals and start earning by offering your expertise
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
-            <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-white/20">
               <DollarSign className="w-8 h-8 text-green-600 mx-auto mb-2" />
               <h3 className="font-semibold text-gray-800">Earn More</h3>
               <p className="text-sm text-gray-600">Set your own rates</p>
             </div>
-            <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-white/20">
               <Users className="w-8 h-8 text-blue-600 mx-auto mb-2" />
               <h3 className="font-semibold text-gray-800">Find Clients</h3>
               <p className="text-sm text-gray-600">Connect with customers</p>
             </div>
-            <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-white/20">
               <Star className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
               <h3 className="font-semibold text-gray-800">Build Reputation</h3>
               <p className="text-sm text-gray-600">Get reviews & ratings</p>
             </div>
-            <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-white/20">
               <Award className="w-8 h-8 text-purple-600 mx-auto mb-2" />
               <h3 className="font-semibold text-gray-800">Grow Business</h3>
               <p className="text-sm text-gray-600">Scale your services</p>
@@ -102,8 +102,8 @@ export function BecomeNexpert({ onNavigate }) {
           </div>
         </div>
 
-        <Card className="bg-white/80 backdrop-blur-sm border-purple-200 shadow-2xl">
-          <CardHeader className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-t-lg">
+        <Card className="bg-white backdrop-blur-sm border-purple-200 shadow-2xl">
+          <CardHeader className="bg-gradient-to-r from-purple-900 to-blue-900 text-white rounded-t-lg">
             <CardTitle className="text-2xl font-bold">Join as a Nexpert</CardTitle>
             <CardDescription className="text-purple-100">
               Fill out the form below to start your journey
@@ -113,17 +113,18 @@ export function BecomeNexpert({ onNavigate }) {
           <CardContent className="p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="name">Full Name</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => handleChange('name', e.target.value)}
-                    required
-                    className="mt-1"
-                  />
-                </div>
-                
+              <div>
+  <Label htmlFor="name">Full Name</Label>
+  <Input
+    id="name"
+    value={formData.name}
+    onChange={(e) => handleChange('name', e.target.value)}
+    required
+    placeholder="Enter your full name"
+    className="mt-1 border border-gray-300 rounded-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
+  />
+</div>
+              
                 <div>
                   <Label htmlFor="email">Email</Label>
                   <Input
@@ -132,7 +133,8 @@ export function BecomeNexpert({ onNavigate }) {
                     value={formData.email}
                     onChange={(e) => handleChange('email', e.target.value)}
                     required
-                    className="mt-1"
+                    placeholder="Enter your email"
+                    className="mt-1 border border-gray-300 rounded-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
               </div>
@@ -146,7 +148,8 @@ export function BecomeNexpert({ onNavigate }) {
                     value={formData.phone}
                     onChange={(e) => handleChange('phone', e.target.value)}
                     required
-                    className="mt-1"
+                    placeholder="Enter your phone number"
+                    className="mt-1 border border-gray-300 rounded-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
                  <div>
@@ -157,7 +160,8 @@ export function BecomeNexpert({ onNavigate }) {
                     value={formData.password}
                     onChange={(e) => handleChange('password', e.target.value)}
                     required
-                    className="mt-1"
+                    placeholder="Enter your password"
+                    className="mt-1 border border-gray-300 rounded-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
               </div>
@@ -169,7 +173,8 @@ export function BecomeNexpert({ onNavigate }) {
                   value={formData.confirmPassword}
                   onChange={(e) => handleChange('confirmPassword', e.target.value)}
                   required
-                  className="mt-1"
+                  placeholder="Enter your confirm password"
+                  className="mt-1 border border-gray-300 rounded-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
 
@@ -182,7 +187,8 @@ export function BecomeNexpert({ onNavigate }) {
                     value={formData.businessName}
                     onChange={(e) => handleChange('businessName', e.target.value)}
                     required
-                    className="mt-1"
+                    placeholder="Enter your business/company name"
+                    className="mt-1 border border-gray-300 rounded-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
                 
@@ -194,7 +200,8 @@ export function BecomeNexpert({ onNavigate }) {
                     value={formData.expertise}
                     onChange={(e) => handleChange('expertise', e.target.value)}
                     required
-                    className="mt-1"
+                    
+                    className="mt-1 border border-gray-300 rounded-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                   />
                 </div>
               </div>
@@ -208,7 +215,7 @@ export function BecomeNexpert({ onNavigate }) {
                   value={formData.experience}
                   onChange={(e) => handleChange('experience', e.target.value)}
                   required
-                  className="mt-1"
+                  className="mt-1 border border-gray-300 rounded-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
 
@@ -220,13 +227,13 @@ export function BecomeNexpert({ onNavigate }) {
                   value={formData.description}
                   onChange={(e) => handleChange('description', e.target.value)}
                   required
-                  className="mt-1 min-h-[120px]"
+                  className="mt-1 min-h-[120px] border border-gray-300 rounded-sm px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
 
               <Button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 text-lg"
+                className="w-full bg-gradient-to-r from-purple-900 to-blue-900 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 text-lg"
               >
                 Submit Application
               </Button>

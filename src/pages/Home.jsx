@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 
 import styles from '@/styles.module.css';
 import classnames from 'classnames'
+import ConsultationSection from '../components/ConsultationSection';
 
 
 
@@ -174,7 +175,7 @@ export function Home({ onNavigate, onServiceSelect }) {
 
         <div className="max-w-2xl mx-auto mb-12">
       <h2 className="text-xl font-bold text-center text-white mb-4">
-        What service or course do you need? <br />
+        Talk to our Nexper AI <br />
         <span className="text-white ">Start now 👇</span>
       </h2>
 
@@ -197,7 +198,7 @@ export function Home({ onNavigate, onServiceSelect }) {
           </Button>
         </div>
 
-        
+
         <div className="max-h-64 overflow-y-auto mb-3 space-y-3 text-sm text-gray-800">
           {messages.map((msg, index) => (
             <div key={index} className={msg.sender === "User" ? "text-right" : "text-left"}>
@@ -237,6 +238,7 @@ export function Home({ onNavigate, onServiceSelect }) {
 <AutoSlideCards/>
         </div>
       </section>
+<ConsultationSection/>
 
       {/* Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-indigo-900">
