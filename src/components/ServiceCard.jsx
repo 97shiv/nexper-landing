@@ -4,7 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Star, MapPin } from 'lucide-react';
 
-export function ServiceCard({ service, onSelect }) {
+export function ServiceCard({ service, onSelect,average = 4.5, total = 123 }) {
+   const fullStars = Math.floor(average);
+  const halfStar = average % 1 >= 0.5;
+  
   return (
     <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-gradient-to-br from-white to-purple-50 border-purple-200 overflow-hidden">
       <div className="relative">
@@ -29,11 +32,19 @@ export function ServiceCard({ service, onSelect }) {
       
       <CardContent className="pt-0">
         <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center space-x-1">
+          {/* <div className="flex items-center space-x-1">
             <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
             <span className="text-sm font-medium">4.8</span>
             <span className="text-sm text-gray-500">(124 reviews)</span>
-          </div>
+          </div> */}
+
+            <div className="flex items-center space-x-2">
+      {[...Array(fullStars)].map((_, i) => (
+        <Star key={i} className="text-yellow-400" fill="currentColor" />
+      ))}
+      {halfStar && <Star className="text-yellow-400 opacity-70" fill="currentColor" />}
+      <span className="text-gray-600 text-sm">({total} reviews)</span>
+    </div>
           <span className="text-sm text-purple-600 font-medium bg-purple-100 px-2 py-1 rounded">
             {service.category}
           </span>

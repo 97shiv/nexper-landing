@@ -44,11 +44,11 @@ const AutoSlideCards = () => {
           <div
             key={i}
             onClick={() => navigate(card.link)}
-            className="cursor-pointer min-w-[180px] mx-2 bg-gray/60 backdrop-blur-sm p-4 rounded-xl border border-white/70 text-center flex-shrink-0 hover:shadow-lg transition"
+            className="cursor-pointer min-w-[180px] mx-2  backdrop-blur-sm p-4 rounded-xl border border-purple-400 text-center flex-shrink-0 hover:shadow-lg transition"
           >
             {card.icon}
-            <h3 className="text-sm font-semibold text-white">{card.title}</h3>
-            <p className="text-xs text-white">{card.desc}</p>
+            <h3 className="text-sm font-semibold text-black">{card.title}</h3>
+            <p className="text-xs text-black">{card.desc}</p>
           </div>
         ))}
       </div>

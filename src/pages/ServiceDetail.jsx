@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { BookingForm } from '@/components/BookingForm';
@@ -8,6 +8,9 @@ import { Star, MapPin, Clock, DollarSign, Award, CheckCircle } from 'lucide-reac
 
 export function ServiceDetail({ service, onNavigate }) {
   const { isAuthenticated } = useAuth();
+const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState("");
+
 
   if (!service) {
     return (
@@ -63,11 +66,12 @@ export function ServiceDetail({ service, onNavigate }) {
               
               <CardContent className="space-y-6">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
+                  {/* <div className="flex items-center space-x-2">
                     <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     <span className="font-semibold">4.8</span>
                     <span className="text-gray-500">(124 reviews)</span>
-                  </div>
+                  </div> */}
+           
                   <span className="text-lg text-purple-600 font-semibold bg-purple-100 px-3 py-1 rounded-full">
                     {service.category}
                   </span>
@@ -115,6 +119,32 @@ export function ServiceDetail({ service, onNavigate }) {
                     They have successfully completed numerous projects and maintain a high customer satisfaction rating.
                   </p>
                 </div>
+
+                        <div className="p-4 bg-white rounded-xl shadow">
+      <h4 className="text-lg font-semibold mb-2">Leave a Review</h4>
+      <div className="flex mb-3">
+        {[1, 2, 3, 4, 5].map((n) => (
+          <Star
+            key={n}
+            className={`cursor-pointer ${n <= rating ? "text-yellow-400" : "text-gray-300"}`}
+            onClick={() => setRating(n)}
+          />
+        ))}
+      </div>
+      <textarea
+        className="w-full p-2 border rounded mb-2"
+        rows={3}
+        placeholder="Your feedback..."
+        value={comment}
+        onChange={(e) => setComment(e.target.value)}
+      />
+      <button
+        className="bg-purple-600 text-white px-4 py-2 rounded"
+        onClick={() => onSubmit({ rating, comment })}
+      >
+        Submit Review
+      </button>
+    </div>
               </CardContent>
             </Card>
           </div>

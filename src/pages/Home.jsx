@@ -14,6 +14,7 @@ import Typography from '@mui/material/Typography';
 import styles from '@/styles.module.css';
 import classnames from 'classnames'
 import ConsultationSection from '../components/ConsultationSection';
+import SubscriptionPlans from '../components/SubscriptionPlans';
 
 
 
@@ -139,19 +140,20 @@ export function Home({ onNavigate, onServiceSelect }) {
     }
   };
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600 mx-auto"></div>
-          <p className="mt-4 text-lg text-gray-600">Loading amazing services...</p>
-        </div>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 flex items-center justify-center">
+  //       <div className="text-center">
+  //         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600 mx-auto"></div>
+  //         <p className="mt-4 text-lg text-gray-600">Loading amazing services...</p>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-indigo-900">
+    // <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-indigo-900">
+       <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
@@ -174,13 +176,12 @@ export function Home({ onNavigate, onServiceSelect }) {
 
 
         <div className="max-w-2xl mx-auto mb-12">
-      <h2 className="text-xl font-bold text-center text-white mb-4">
+      <h2 className="text-xl font-bold text-center text-black mb-4">
         Talk to our Nexper AI <br />
-        <span className="text-white ">Start now 👇</span>
+        <span className="text-black ">Start now 👇</span>
       </h2>
 
-      <div className="relative  backdrop-blur-sm border-2 border-purple-100 rounded-2xl p-5 shadow-lg">
-
+      <div className="relative  backdrop-blur-sm border-2 border-purple-400 rounded-2xl p-5 shadow-lg">
          <div className="flex items-center space-x-2">
           <textarea
             rows="1"
@@ -197,8 +198,6 @@ export function Home({ onNavigate, onServiceSelect }) {
             Send
           </Button>
         </div>
-
-
         <div className="max-h-64 overflow-y-auto mb-3 space-y-3 text-sm text-gray-800">
           {messages.map((msg, index) => (
             <div key={index} className={msg.sender === "User" ? "text-right" : "text-left"}>
@@ -238,10 +237,11 @@ export function Home({ onNavigate, onServiceSelect }) {
 <AutoSlideCards/>
         </div>
       </section>
-<ConsultationSection/>
+
 
       {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-indigo-900">
+      {/* <section className="py-16 px-4 sm:px-6 lg:px-8 min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-indigo-900"> */}
+        <section className=" px-4 sm:px-6 lg:px-8 min-h-screen bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Featured Services</h2>
@@ -271,6 +271,8 @@ export function Home({ onNavigate, onServiceSelect }) {
           )}
         </div>
       </section>
+<ConsultationSection/>
+      <SubscriptionPlans/>
     </div>
   );
 }

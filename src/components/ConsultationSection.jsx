@@ -15,7 +15,7 @@ const ConsultationSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-black to-indigo-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-purple-100  to-indigo-100 text-black py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-12">
         {[servicesRow1, servicesRow2].map((row, index) => (
           <div key={index} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">

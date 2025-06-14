@@ -68,33 +68,34 @@ export function BecomeNexpert({ onNavigate }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-indigo-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+    // <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-indigo-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+     <div className="min-h-screen bg-white text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
             Become a Nexpert
           </h1>
-          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-black mb-8 max-w-3xl mx-auto">
             Join our community of skilled professionals and start earning by offering your expertise
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
-            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-gray">
               <DollarSign className="w-8 h-8 text-green-600 mx-auto mb-2" />
               <h3 className="font-semibold text-gray-800">Earn More</h3>
               <p className="text-sm text-gray-600">Set your own rates</p>
             </div>
-            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-gray">
               <Users className="w-8 h-8 text-blue-600 mx-auto mb-2" />
               <h3 className="font-semibold text-gray-800">Find Clients</h3>
               <p className="text-sm text-gray-600">Connect with customers</p>
             </div>
-            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-gray">
               <Star className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
               <h3 className="font-semibold text-gray-800">Build Reputation</h3>
               <p className="text-sm text-gray-600">Get reviews & ratings</p>
             </div>
-            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white backdrop-blur-sm rounded-xl border border-gray">
               <Award className="w-8 h-8 text-purple-600 mx-auto mb-2" />
               <h3 className="font-semibold text-gray-800">Grow Business</h3>
               <p className="text-sm text-gray-600">Scale your services</p>
@@ -103,7 +104,7 @@ export function BecomeNexpert({ onNavigate }) {
         </div>
 
         <Card className="bg-white backdrop-blur-sm border-purple-200 shadow-2xl">
-          <CardHeader className="bg-gradient-to-r from-purple-900 to-blue-900 text-white rounded-t-lg">
+          <CardHeader className="bg-gradient-to-r from-purple-700 to-blue-700 text-white rounded-t-lg">
             <CardTitle className="text-2xl font-bold">Join as a Nexpert</CardTitle>
             <CardDescription className="text-purple-100">
               Fill out the form below to start your journey
@@ -233,7 +234,7 @@ export function BecomeNexpert({ onNavigate }) {
 
               <Button 
                 type="submit" 
-                className="w-full bg-gradient-to-r from-purple-900 to-blue-900 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 text-lg"
+                className="w-full bg-gradient-to-r from-purple-700 to-blue-700 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 text-lg"
               >
                 Submit Application
               </Button>
